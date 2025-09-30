@@ -3,106 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chris Tech Installation Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Chris Tech Installation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-pIFH4zF6lM1H4kBbs6k8ZZrVSu2Ce279b9Ec/WWEDuJeayQMZT6X0hgqP/d9vywgqbiZ9erjRzCQ7T8e1Jy1PQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container"> 
-        <header>
-            <nav class="navbar section-content">
-                <a href="#" class="nav-logo">
-                <h2 class="logo-text">Solar Panels</h2>
-              </a>
-               <ul class="nav-item">
-                
-                <button id="menu-close-button" class="fas fa-times"></button>
-                
-                <li class="nav-link"><a href="#">Home</a></li>
-                <li class="nav-link"><a href="#">About</a></li>
-                <li class="nav-link"><a href="#">Services</a></li>
-                <li class="nav-link"><a href="#">Contact</a></li>
-              </ul>
-
-              <div class="menu-toggle">
-                <button id="menu-open-button" class="fas fa-bars"></button>
-              </div>
-           </nav>
-       </header>
-   </div>
+    <header class="site-header">
+        <nav class="navbar section-content" aria-label="Primary">
+            <a href="#hero" class="nav-logo">
+                <div class="logo-text">
+                    <span class="logo-highlight">Chris Tech</span> Installation
+                </div>
+            </a>
+            <button id="menu-open-button" class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Open navigation</span>
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <ul class="nav-item" id="primary-navigation">
+                <li class="nav-link"><a href="#hero">Home</a></li>
+                <li class="nav-link"><a href="#about">About</a></li>
+                <li class="nav-link"><a href="#services">Services</a></li>
+                <li class="nav-link"><a href="#contact">Contact</a></li>
+                <li class="nav-close">
+                    <button id="menu-close-button" class="menu-toggle" aria-label="Close navigation">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <div class="container">
-          <!--Hero Section-->
-            <section class="hero-section">
-                <div class="section-content">
-                    <div class="hero-details"><h2 class="title">Chris Tech Installation</h2>
-                    <h3 class="subtitle">Your trusted partner for tech solutions</h3>
-                 <p class="description">We provide top-notch installation services for all your tech needs.</p>
-                 <div class="buttons">
-                    <button class="button">Get Started</button>
-                    <button class="button">Contact Us</button>
-                  </div>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="section-content hero-content">
+                <div class="hero-details">
+                    <p class="tagline"><i class="fa-solid fa-solar-panel" aria-hidden="true"></i> Solar Specialists Since 2010</p>
+                    <h1 class="title">Powering Homes & Businesses with Reliable Solar Energy</h1>
+                    <p class="description">From custom solar panel installations to expert repairs and maintenance, Chris Tech Installation keeps your energy systems running at peak performance. Our certified technicians deliver safe, efficient and affordable clean energy solutions.</p>
+                    <div class="buttons">
+                        <a class="button" href="#services">Explore Services</a>
+                        <a class="button button-secondary" href="#contact">Request a Quote</a>
+                    </div>
+                    <ul class="hero-highlights">
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> Complete solar installation packages</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> AC and inverter integration</li>
+                        <li><i class="fa-solid fa-check" aria-hidden="true"></i> Rapid-response repair services</li>
+                    </ul>
                 </div>
-                <div class="social-link-list">
-                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
-               </div>
-           </section>
-        </div>
-
-        <!--About Section-->
-        <section class="about-section">
-            <h2 class="section-title">About Us</h2>
-            <div class="section-content">
-                <img src="Images/about-image.jpg" alt="About Us" class="about-image">
-                <div class="about-details">
-                <h3 class="title">Chris Tech Installation</h3>
-                <p class="description">Our mission is to make technology work seamlessly by providing safe, reliable, and efficient installation services. Backed by a team of highly skilled electricians and technicians, we are committed to delivering excellence in every project—whether it’s wiring, smart tech setups, or specialized installations. With precision, professionalism, and a customer-first approach, we ensure your tech needs are handled with the highest standard of service.</p>
+                <div class="hero-image-wrapper" aria-hidden="true">
+                    <div class="hero-image"></div>
                 </div>
             </div>
         </section>
-  
-        <!--Services Section-->
-        <div class="service-section">
-            <h2 class="service-heading">Our Services</h2>
-            <div class="service-container">
-                <div class="service-card">
-                    <i class="fa-solid fa-house-laptop"></i>
-                    <h4>Residential Installation</h4>
-                    <p>We offer comprehensive residential installation services, ensuring your home is equipped with the latest technology.</p>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-content">
+                <div class="about-image-wrapper">
+                    <img src="about-image.jpg" alt="Chris Tech technicians installing a solar inverter" class="about-image">
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-briefcase"></i>
-                    <h4>Commercial Installation</h4>
-                    <p>Our team is experienced in providing installation services for commercial spaces, ensuring minimal disruption to your business operations.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-house"></i>
-                    <h4>Smart Home Installation</h4>
-                    <p>We provide expert installation services for smart home technology, ensuring your home is equipped with the latest innovations.</p>
+                <div class="about-details">
+                    <h2 class="section-title">About Us</h2>
+                    <p>Chris Tech Installation is your trusted partner for dependable solar energy solutions. We combine skilled electricians, premium equipment and meticulous craftsmanship to deliver installations that stand the test of time.</p>
+                    <p>Whether you are powering a new build, upgrading an existing system or in need of emergency repairs, our team provides clear guidance and hands-on support every step of the way. We are committed to keeping your home or business powered safely and sustainably.</p>
                 </div>
             </div>
-        </div>
-   </main>
-            <!--Footer-->
-            <section class="footer">
-                <div class="social">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                </div>
+        </section>
 
-                <ul class="list">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-                <p class="copyright">© 2025 Chris Tech Installation. All rights reserved.</p>
-            </section>
-            <script src="script.js"></script>
+        <!-- Services Section -->
+        <section id="services" class="service-section">
+            <div class="section-content">
+                <h2 class="service-heading">Our Services</h2>
+                <div class="service-container">
+                    <article class="service-card">
+                        <i class="fa-solid fa-solar-panel" aria-hidden="true"></i>
+                        <h3>Solar System Installation</h3>
+                        <p>Custom solar setups with high-efficiency panels, inverters and batteries tailored to your power goals.</p>
+                    </article>
+                    <article class="service-card">
+                        <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                        <h3>Maintenance & Repairs</h3>
+                        <p>Fast troubleshooting, inverter swaps, panel cleaning and performance optimization to minimize downtime.</p>
+                    </article>
+                    <article class="service-card">
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                        <h3>Energy Audits & Upgrades</h3>
+                        <p>Load assessments, AC integration and smart monitoring that keep your system efficient and future-ready.</p>
+                    </article>
+                    <article class="service-card">
+                        <i class="fa-solid fa-helmet-safety" aria-hidden="true"></i>
+                        <h3>Certified Electricians</h3>
+                        <p>Experienced technicians delivering safe wiring, backup power solutions and professional installations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-content contact-content">
+                <div class="contact-details">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p>Ready to install, upgrade or service your solar system? Reach us via phone or WhatsApp and our team will schedule a site visit right away.</p>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:09162934241">0916 293 4241</a></li>
+                        <li><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> <a href="https://wa.me/2349094315948" target="_blank" rel="noopener">0909 431 5948</a></li>
+                        <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> <a href="mailto:info@christechinstallation.com">info@christechinstallation.com</a></li>
+                        <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Nationwide on-site installation &amp; support</li>
+                    </ul>
+                </div>
+                <form class="contact-form" aria-label="Request a quote">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Needed</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="installation">Solar Installation</option>
+                            <option value="repair">Repairs &amp; Maintenance</option>
+                            <option value="upgrade">System Upgrade</option>
+                            <option value="audit">Energy Audit</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">How can we help?</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your project" required></textarea>
+                    </div>
+                    <button type="submit" class="button submit-button">Send Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="social" aria-label="Social media">
+            <a href="https://facebook.com" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <ul class="list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Support</a></li>
+            <li><a href="mailto:info@christechinstallation.com">info@christechinstallation.com</a></li>
+        </ul>
+        <p class="copyright">© <span id="current-year"></span> Chris Tech Installation. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
