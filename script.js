@@ -3,6 +3,7 @@ const menuCloseButton = document.querySelector("#menu-close-button");
 const navigation = document.querySelector("#primary-navigation");
 const navLinks = document.querySelectorAll(".nav-link a");
 
+
 const toggleMenu = (shouldOpen) => {
     if (!navigation || !menuOpenButton) return;
 
